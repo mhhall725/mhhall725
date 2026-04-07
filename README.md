@@ -21,22 +21,3 @@ I provide **high-fidelity genomic insights** by integrating massive cohort data 
 📫 [LinkedIn](https://www.linkedin.com/in/matthall-genomics) | 📧 Mhhall725@gmail.com
 ---
 
-# Project: Genomic Data Pipeline (v9 Analysis Framework)
-This repository demonstrates a modular Python-based pipeline designed for the ingestion, quality control (QC), and processing of high-volume genomic datasets, specifically optimized for the **NIH All of Us (v9)** environment.
-
-### 🧬 Current Phase: Phase 1 - Automated Ingestion & QC
-The pipeline currently implements a hardened ingestion module (`01_data_ingestion.py`) featuring:
-- **Automated Logging:** Full traceability of data loading events using the Python `logging` library.
-- **QC Protocol:** Immediate generation of descriptive statistics (Mean, Std, Quartiles) to verify data distribution before analysis.
-- **Data Privacy:** Local-only `data/` directory structure to ensure compliance with HIPAA and researcher workbench security protocols.
-
-### Project Architecture
-- **`data/`**: (Local Only) Directory for raw genomic source files.
-- **`scripts/`**: Modular Python components for data processing and analysis.
-- **`results/`**: Automated output directory for QC reports and processed summaries.
-
-### How to Run
-1. Ensure a valid CSV is present in the `data/` directory.
-2. Execute the ingestion module:
-   ```powershell
-   python scripts/01_data_ingestion.py
